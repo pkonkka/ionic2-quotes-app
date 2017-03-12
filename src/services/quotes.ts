@@ -7,7 +7,6 @@ export class QuotesService {
     // ---------------------------------------------------------------------------------
     addQuoteToFavorites(quote: Quote) {
         this.favoriteQuotes.push(quote);
-        console.log(this.favoriteQuotes);
     }
 
     // ---------------------------------------------------------------------------------
@@ -25,4 +24,10 @@ export class QuotesService {
         this.favoriteQuotes.splice(position, 1);
     }
 
-}
+    // ---------------------------------------------------------------------------------
+    isQuoteFavorite(quote: Quote) {
+        return this.favoriteQuotes.find((quoteEl: Quote) => {
+            return quoteEl.id == quote.id;
+        });
+    }
+ }

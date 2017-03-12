@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { CapitalizePipe } from '../pipes/capitalize.pipe';
 
 import { QuotesService } from '../services/quotes';
+import { SettingsService } from '../services/settings';
 
 
 @NgModule({
@@ -38,6 +39,6 @@ import { QuotesService } from '../services/quotes';
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, 
-    QuotesService]
+    QuotesService, SettingsService]
 })
 export class AppModule {}
